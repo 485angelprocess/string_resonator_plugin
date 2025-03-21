@@ -1,0 +1,20 @@
+[package]
+name = "string_resonate"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+num-traits = "0.2.19"
+simper-filter = "0.1.0"
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git", features = ["assert_process_allocs"] }
+nih_plug_vizia = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+parking_lot = "0.12"
+vizia = { git = "https://github.com/vizia/vizia", branch = "vizia_plug", default_features = false, features = ["baseview", "clipboard", "x11"] }
+
+[workspace]
+members = [
+  "xtask",
+]
